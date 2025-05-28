@@ -1,0 +1,40 @@
+{
+  "type": "create:mixing",
+  "ingredients": [
+    {
+      "item": "garnished_additions:spice_compound"
+    },
+    {
+      "item": "garnished:garnish_compound"
+    },
+    {
+      "item": "garnished:cracked_chestnut"
+    },
+    {
+      "item": "garnished_additions:elder_guardian_fin"
+    },
+    {
+      "item": "garnished_additions:elder_guardian_fin"
+    },
+    {
+      "tag": "c:eggs"
+    },
+    {
+      "tag": "c:mushrooms"
+    },
+    {
+      "tag": "c:mushrooms"
+    },
+    {
+      "type": "fluid_stack",
+      "amount": 500,
+      "fluid": "minecraft:water"
+    }
+  ],
+  "results": [
+    {
+      "id": "garnished_additions:elder_guardian_fin_soup"
+    }
+  ],
+  "heat_requirement": "heated"
+}

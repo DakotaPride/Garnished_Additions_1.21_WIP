@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:campfire_cooking",
+  "category": "food",
+  "ingredient": {
+    "item": "garnished:macadamia"
+  },
+  "result": {
+    "id": "garnished_additions:roasted_macadamia"
+  },
+  "experience": 0.4,
+  "cookingtime": 600
+}

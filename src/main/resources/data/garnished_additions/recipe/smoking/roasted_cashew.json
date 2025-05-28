@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smoking",
+  "ingredient": {
+    "item": "garnished:cashew"
+  },
+  "result": {
+    "id": "garnished_additions:roasted_cashew"
+  },
+  "experience": 0.4,
+  "cookingtime": 100
+}

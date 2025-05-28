@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smoking",
+  "ingredient": {
+    "item": "garnished:almond"
+  },
+  "result": {
+    "id": "garnished_additions:roasted_almond"
+  },
+  "experience": 0.4,
+  "cookingtime": 100
+}

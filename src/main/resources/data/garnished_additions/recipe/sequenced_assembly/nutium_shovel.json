@@ -1,0 +1,77 @@
+{
+  "type": "create:sequenced_assembly",
+  "ingredient": {
+    "item": "netherite_shovel"
+  },
+  "loops": 1,
+  "results": [
+    {
+      "id": "garnished_additions:nutium_shovel"
+    }
+  ],
+  "sequence": [
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "garnished_additions:incomplete_nutium_shovel"
+        },
+        {
+          "item": "garnished_additions:nutium_ingot"
+        }
+      ],
+      "results": [
+        {
+          "id": "garnished_additions:incomplete_nutium_shovel"
+        }
+      ]
+    },
+    {
+      "type": "create:filling",
+      "ingredients": [
+        {
+          "item": "garnished_additions:incomplete_nutium_shovel"
+        },
+        {
+          "type": "fluid_stack",
+          "amount": 500,
+          "fluid": "minecraft:lava"
+        }
+      ],
+      "results": [
+        {
+          "id": "garnished_additions:incomplete_nutium_shovel"
+        }
+      ]
+    },
+    {
+      "type": "create:pressing",
+      "ingredients": [
+        {
+          "item": "garnished_additions:incomplete_nutium_shovel"
+        }
+      ],
+      "results": [
+        {
+          "id": "garnished_additions:incomplete_nutium_shovel"
+        }
+      ]
+    },
+    {
+      "type": "create:pressing",
+      "ingredients": [
+        {
+          "item": "garnished_additions:incomplete_nutium_shovel"
+        }
+      ],
+      "results": [
+        {
+          "id": "garnished_additions:incomplete_nutium_shovel"
+        }
+      ]
+    }
+  ],
+  "transitional_item": {
+    "id": "garnished_additions:incomplete_nutium_shovel"
+  }
+}

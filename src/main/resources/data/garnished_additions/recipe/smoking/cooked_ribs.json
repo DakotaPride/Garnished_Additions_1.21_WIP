@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smoking",
+  "ingredient": {
+    "item": "garnished_additions:ribs"
+  },
+  "result": {
+    "id": "garnished_additions:cooked_ribs"
+  },
+  "experience": 1,
+  "cookingtime": 100
+}

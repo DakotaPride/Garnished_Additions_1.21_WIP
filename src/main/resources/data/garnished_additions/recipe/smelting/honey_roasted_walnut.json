@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "garnished:honeyed_walnut"
+  },
+  "result": {
+    "id": "garnished_additions:honey_roasted_walnut"
+  },
+  "experience": 0.4,
+  "cookingtime": 200
+}

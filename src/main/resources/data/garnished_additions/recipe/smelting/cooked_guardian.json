@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "garnished_additions:raw_guardian"
+  },
+  "result": {
+    "id": "garnished_additions:cooked_guardian"
+  },
+  "experience": 1,
+  "cookingtime": 200
+}

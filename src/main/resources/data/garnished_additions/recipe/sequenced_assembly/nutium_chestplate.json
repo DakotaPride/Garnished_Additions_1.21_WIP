@@ -1,0 +1,77 @@
+{
+  "type": "create:sequenced_assembly",
+  "ingredient": {
+    "item": "netherite_chestplate"
+  },
+  "loops": 1,
+  "results": [
+    {
+      "id": "garnished_additions:nutium_chestplate"
+    }
+  ],
+  "sequence": [
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "garnished_additions:incomplete_nutium_chestplate"
+        },
+        {
+          "item": "garnished_additions:nutium_ingot"
+        }
+      ],
+      "results": [
+        {
+          "id": "garnished_additions:incomplete_nutium_chestplate"
+        }
+      ]
+    },
+    {
+      "type": "create:filling",
+      "ingredients": [
+        {
+          "item": "garnished_additions:incomplete_nutium_chestplate"
+        },
+        {
+          "type": "fluid_stack",
+          "amount": 500,
+          "fluid": "minecraft:lava"
+        }
+      ],
+      "results": [
+        {
+          "id": "garnished_additions:incomplete_nutium_chestplate"
+        }
+      ]
+    },
+    {
+      "type": "create:pressing",
+      "ingredients": [
+        {
+          "item": "garnished_additions:incomplete_nutium_chestplate"
+        }
+      ],
+      "results": [
+        {
+          "id": "garnished_additions:incomplete_nutium_chestplate"
+        }
+      ]
+    },
+    {
+      "type": "create:pressing",
+      "ingredients": [
+        {
+          "item": "garnished_additions:incomplete_nutium_chestplate"
+        }
+      ],
+      "results": [
+        {
+          "id": "garnished_additions:incomplete_nutium_chestplate"
+        }
+      ]
+    }
+  ],
+  "transitional_item": {
+    "id": "garnished_additions:incomplete_nutium_chestplate"
+  }
+}

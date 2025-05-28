@@ -1,0 +1,37 @@
+{
+  "type": "create:mixing",
+  "ingredients": [
+    {
+      "tag": "garnished:cracked_nuts"
+    },
+    {
+      "item": "minecraft:sugar"
+    },
+    {
+      "item": "minecraft:sugar"
+    },
+    {
+      "item": "garnished:bitter_almond"
+    },
+    {
+      "tag": "c:flour"
+    },
+    {
+      "tag": "c:dough"
+    },
+    {
+      "item": "garnished:crushed_salt"
+    },
+    {
+      "type": "fluid_tag",
+      "amount": 250,
+      "fluid_tag": "c:honey"
+    }
+  ],
+  "results": [
+    {
+      "id": "garnished_additions:marzipan"
+    }
+  ],
+  "heat_requirement": "heated"
+}

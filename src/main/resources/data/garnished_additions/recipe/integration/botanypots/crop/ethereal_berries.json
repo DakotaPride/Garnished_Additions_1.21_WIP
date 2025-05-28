@@ -1,0 +1,30 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "botanypots"
+    }
+  ],
+  "type": "botanypots:crop",
+  "seed": {
+    "item": "garnished_additions:ethereal_berries"
+  },
+  "categories": [
+    "rooted_end_stone",
+    "end_stone"
+  ],
+  "growthTicks": 1200,
+  "display": {
+    "block": "garnished_additions:ethereal_berry_bush"
+  },
+  "drops": [
+    {
+      "chance": 1.00,
+      "output": {
+        "item": "garnished_additions:ethereal_berries"
+      },
+      "minRolls": 1,
+      "maxRolls": 2
+    }
+  ]
+}

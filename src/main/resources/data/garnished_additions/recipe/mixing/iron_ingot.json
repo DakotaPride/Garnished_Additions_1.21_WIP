@@ -1,0 +1,22 @@
+{
+  "type": "create:mixing",
+  "ingredients": [
+    {
+      "item": "create:crushed_raw_iron"
+    },
+    {
+      "item": "garnished_additions:ironnut_powder"
+    }
+  ],
+  "results": [
+    {
+      "chance": 1,
+      "id": "minecraft:iron_ingot"
+    },
+    {
+      "chance": 0.5,
+      "id": "minecraft:iron_ingot"
+    }
+  ],
+  "heat_requirement": "heated"
+}

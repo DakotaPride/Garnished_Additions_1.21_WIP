@@ -1,0 +1,29 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "botanypots"
+    }
+  ],
+  "type": "botanypots:crop",
+  "seed": {
+    "item": "garnished_additions:lethal_liana"
+  },
+  "categories": [
+    "basalt"
+  ],
+  "growthTicks": 1200,
+  "display": {
+    "block": "garnished_additions:lethal_liana"
+  },
+  "drops": [
+    {
+      "chance": 1.00,
+      "output": {
+        "item": "garnished_additions:lethal_liana"
+      },
+      "minRolls": 1,
+      "maxRolls": 2
+    }
+  ]
+}

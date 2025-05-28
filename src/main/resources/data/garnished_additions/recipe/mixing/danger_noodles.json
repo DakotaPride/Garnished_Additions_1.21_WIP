@@ -1,0 +1,29 @@
+{
+  "type": "create:mixing",
+  "ingredients": [
+    {
+      "item": "garnished_additions:lethal_liana"
+    },
+    {
+      "item": "garnished_additions:lethal_liana"
+    },
+    {
+      "item": "garnished_additions:hazardous_hyphae"
+    },
+    {
+      "item": "garnished_additions:hazardous_hyphae"
+    },
+    {
+      "item": "garnished_additions:spice_powder"
+    },
+    {
+      "item": "minecraft:bowl"
+    }
+  ],
+  "results": [
+    {
+      "id": "garnished_additions:danger_noodles"
+    }
+  ],
+  "heat_requirement": "heated"
+}

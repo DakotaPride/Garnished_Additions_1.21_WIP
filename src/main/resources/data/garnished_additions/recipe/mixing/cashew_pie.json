@@ -1,0 +1,26 @@
+{
+  "type": "create:mixing",
+  "ingredients": [
+    {
+      "tag": "c:flour"
+    },
+    {
+      "tag": "c:eggs"
+    },
+    {
+      "item": "minecraft:sugar"
+    },
+    {
+      "item": "garnished:cashew"
+    },
+    {
+      "item": "garnished:cashew"
+    }
+  ],
+  "results": [
+    {
+      "id": "garnished_additions:cashew_pie"
+    }
+  ],
+  "heat_requirement": "heated"
+}

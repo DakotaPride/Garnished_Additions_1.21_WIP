@@ -1,0 +1,14 @@
+{
+  "type": "create:cutting",
+  "ingredients": [
+    {
+      "item": "garnished_additions:ethereal_wood"
+    }
+  ],
+  "processing_time": 50,
+  "results": [
+    {
+      "id": "garnished_additions:stripped_ethereal_wood"
+    }
+  ]
+}

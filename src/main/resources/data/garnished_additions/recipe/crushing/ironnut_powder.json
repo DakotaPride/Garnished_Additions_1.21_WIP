@@ -1,0 +1,20 @@
+{
+  "type": "create:crushing",
+  "ingredients": [
+    {
+      "item": "garnished_additions:ironnut"
+    }
+  ],
+  "processing_time": 150,
+  "results": [
+    {
+      "count": 2,
+      "id": "garnished_additions:ironnut_powder"
+    },
+    {
+      "chance": 0.5,
+      "id": "garnished_additions:ironnut_powder",
+      "count": 1
+    }
+  ]
+}

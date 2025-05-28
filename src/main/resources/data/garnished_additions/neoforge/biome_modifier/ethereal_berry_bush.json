@@ -1,0 +1,9 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": [
+    "end_highlands",
+    "end_midlands"
+  ],
+  "features": "garnished_additions:ethereal_berry_bush",
+  "step": "vegetal_decoration"
+}

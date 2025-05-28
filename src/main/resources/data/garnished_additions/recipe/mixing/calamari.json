@@ -1,0 +1,23 @@
+{
+  "type": "create:mixing",
+  "ingredients": [
+    {
+      "item": "garnished_additions:raw_squid"
+    },
+    {
+      "type": "fluid_stack",
+      "amount": 500,
+      "fluid": "garnished:peanut_oil"
+    }
+  ],
+  "results": [
+    {
+      "id": "garnished_additions:calamari"
+    },
+    {
+      "amount": 500,
+      "id": "garnished:peanut_oil"
+    }
+  ],
+  "heat_requirement": "heated"
+}

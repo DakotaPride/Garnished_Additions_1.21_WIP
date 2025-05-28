@@ -1,0 +1,32 @@
+{
+  "type": "create:mixing",
+  "ingredients": [
+    {
+      "tag": "c:flour"
+    },
+    {
+      "tag": "c:flour"
+    },
+    {
+      "tag": "c:flour"
+    },
+    {
+      "item": "minecraft:cooked_salmon"
+    },
+    {
+      "item": "minecraft:cooked_chicken"
+    },
+    {
+      "tag": "c:eggs"
+    },
+    {
+      "item": "garnished:cracked_almond"
+    }
+  ],
+  "results": [
+    {
+      "id": "garnished_additions:malsouka"
+    }
+  ],
+  "heat_requirement": "heated"
+}

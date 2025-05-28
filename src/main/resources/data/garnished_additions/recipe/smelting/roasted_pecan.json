@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "garnished:pecan"
+  },
+  "result": {
+    "id": "garnished_additions:roasted_pecan"
+  },
+  "experience": 0.4,
+  "cookingtime": 200
+}

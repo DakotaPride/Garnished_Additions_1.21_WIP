@@ -1,0 +1,26 @@
+{
+  "type": "create:mixing",
+  "ingredients": [
+    {
+      "item": "garnished_additions:raw_squid"
+    },
+    {
+      "item": "garnished_additions:raw_guardian"
+    },
+    {
+      "item": "minecraft:cod"
+    },
+    {
+      "item": "minecraft:salmon"
+    },
+    {
+      "item": "minecraft:kelp"
+    }
+  ],
+  "results": [
+    {
+      "id": "garnished_additions:seafood_platter"
+    }
+  ],
+  "heat_requirement": "heated"
+}
