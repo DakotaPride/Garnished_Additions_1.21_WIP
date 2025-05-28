@@ -1,15 +1,25 @@
 package net.panda.garnished_additions.init;
 
+import com.simibubi.create.content.legacy.ChromaticCompoundColor;
+import com.simibubi.create.content.legacy.ChromaticCompoundItem;
 import com.simibubi.create.content.processing.sequenced.SequencedAssemblyItem;
+import com.simibubi.create.foundation.data.AssetLookup;
 import com.simibubi.create.foundation.data.CreateRegistrate;
 import com.tterrag.registrate.util.entry.ItemEntry;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Rarity;
-import net.panda.garnished_additions.GarnishedAdditionsForgeMain;
+import net.panda.garnished_additions.GarnishedAdditionsNeoForgeMain;
 import net.panda.garnished_additions.item.*;
 
 public class GarnishedAdditionsItemsInit {
-    private static final CreateRegistrate REGISTRATE = GarnishedAdditionsForgeMain.REGISTRATE;
+    private static final CreateRegistrate REGISTRATE = GarnishedAdditionsNeoForgeMain.REGISTRATE;
+
+    // Bandaid fix for invisible Create mod chromatic compound
+    public static final ItemEntry<ChromaticCompoundItem> CHROMATIC_COMPOUND =
+            REGISTRATE.item("chromatic_compound", ChromaticCompoundItem::new)
+                    .properties(p -> p.rarity(Rarity.UNCOMMON))
+                    //.color(() -> ChromaticCompoundColor::new)
+                    .register();
 
     public static final ItemEntry<?> NUTIUM_HELMET = REGISTRATE.item("nutium_helmet", NutiumArmourItem.Helmet::new).register();
     public static final ItemEntry<?> NUTIUM_CHESTPLATE = REGISTRATE.item("nutium_chestplate", NutiumArmourItem.Chestplate::new).register();

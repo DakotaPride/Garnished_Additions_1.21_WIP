@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "create:shadow_steel"
+      "id": "create:shadow_steel"
     },
     "title": "The Dark Side",
     "description": "Obtain your first Shadow Steel",
@@ -28,5 +28,5 @@
       }
     }
   },
-"parent": "garnished_additions:now_this_is_a_throwback"
+  "parent": "garnished_additions:now_this_is_a_throwback"
 }

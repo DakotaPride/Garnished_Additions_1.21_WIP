@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "garnished_additions:nutium_ingot"
+      "id": "garnished_additions:nutium_ingot"
     },
     "title": "This Is Nuts!",
     "description": "Obtain your first Nutium Ingot",

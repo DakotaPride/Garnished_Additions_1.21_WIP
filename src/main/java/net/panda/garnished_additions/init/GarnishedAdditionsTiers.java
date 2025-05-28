@@ -6,13 +6,13 @@ import net.minecraft.util.LazyLoadedValue;
 import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.block.Block;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.function.Supplier;
 
 public enum GarnishedAdditionsTiers implements Tier {
-    NUTIUM(4, 3072, 10.0F, 9.0F, 20, () -> {
-        return Ingredient.of(GarnishedAdditionsItemsInit.NUTIUM_INGOT.get());
-    }, BlockTags.INCORRECT_FOR_NETHERITE_TOOL);
+    NUTIUM(4, 3072, 10.0F, 9.0F, 20,
+            () -> Ingredient.of(GarnishedAdditionsItemsInit.NUTIUM_INGOT.get()), BlockTags.INCORRECT_FOR_NETHERITE_TOOL);
 
     private final int level;
     private final int uses;
@@ -22,13 +22,13 @@ public enum GarnishedAdditionsTiers implements Tier {
     private final LazyLoadedValue<Ingredient> repairIngredient;
     private final TagKey<Block> incorrectBlocksForDrops;
 
-    private GarnishedAdditionsTiers(int level,
-                                    int uses,
-                                    float speed,
-                                    float damage,
-                                    int enchantmentValue,
-                                    Supplier<Ingredient> repairIngredient,
-                                    TagKey<Block> incorrectBlocksForDrops) {
+    GarnishedAdditionsTiers(int level,
+                            int uses,
+                            float speed,
+                            float damage,
+                            int enchantmentValue,
+                            Supplier<Ingredient> repairIngredient,
+                            TagKey<Block> incorrectBlocksForDrops) {
         this.level = level;
         this.uses = uses;
         this.speed = speed;
@@ -51,8 +51,8 @@ public enum GarnishedAdditionsTiers implements Tier {
     }
 
     @Override
-    public TagKey<Block> getIncorrectBlocksForDrops() {
-        return null;
+    public @NotNull TagKey<Block> getIncorrectBlocksForDrops() {
+        return incorrectBlocksForDrops;
     }
 
     public int getLevel() {
@@ -63,7 +63,7 @@ public enum GarnishedAdditionsTiers implements Tier {
         return this.enchantmentValue;
     }
 
-    public Ingredient getRepairIngredient() {
+    public @NotNull Ingredient getRepairIngredient() {
         return this.repairIngredient.get();
     }
 

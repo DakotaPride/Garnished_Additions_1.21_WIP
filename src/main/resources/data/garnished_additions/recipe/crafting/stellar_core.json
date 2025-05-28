@@ -9,9 +9,14 @@
     "#": {
       "item": "garnished_additions:stardust"
     },
-    "c": {
-      "item": "create:chromatic_compound"
-    },
+    "c": [
+      {
+        "item": "create:chromatic_compound"
+      },
+      {
+        "item": "garnished_additions:chromatic_compound"
+      }
+    ],
     "i": {
       "item": "garnished_additions:nutium_ingot"
     }

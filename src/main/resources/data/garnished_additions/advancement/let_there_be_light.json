@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "create:refined_radiance"
+      "id": "create:refined_radiance"
     },
     "title": "Let There Be Light",
     "description": "Obtain your first Refined Radiance",
@@ -28,5 +28,5 @@
       }
     }
   },
-"parent": "garnished_additions:now_this_is_a_throwback"
+  "parent": "garnished_additions:now_this_is_a_throwback"
 }

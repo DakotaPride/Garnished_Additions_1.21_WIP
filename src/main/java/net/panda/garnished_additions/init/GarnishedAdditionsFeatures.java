@@ -10,12 +10,12 @@ import net.minecraft.world.level.levelgen.placement.PlacedFeature;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
-import net.panda.garnished_additions.GarnishedAdditionsForgeMain;
+import net.panda.garnished_additions.GarnishedAdditionsNeoForgeMain;
 import net.panda.garnished_additions.feature.HazardousHyphaeFeature;
 import net.panda.garnished_additions.feature.LethalLianaFeature;
 
 public class GarnishedAdditionsFeatures {
-    private static final DeferredRegister<Feature<?>> REGISTER = DeferredRegister.create(BuiltInRegistries.FEATURE, GarnishedAdditionsForgeMain.MOD_ID);
+    private static final DeferredRegister<Feature<?>> REGISTER = DeferredRegister.create(BuiltInRegistries.FEATURE, GarnishedAdditionsNeoForgeMain.MOD_ID);
     public static final ResourceKey<ConfiguredFeature<?, ?>> ETHEREAL_TREE_CONFIGURED = loadConfiguredKey("ethereal_tree");
     public static final ResourceKey<PlacedFeature> ETHEREAL_TREE_PLACED = loadPlacedKey("ethereal_tree");
 
@@ -25,11 +25,11 @@ public class GarnishedAdditionsFeatures {
             REGISTER.register("lethal_liana", () -> new LethalLianaFeature(NoneFeatureConfiguration.CODEC));
 
     public static ResourceKey<ConfiguredFeature<?, ?>> loadConfiguredKey(String name) {
-        return ResourceKey.create(Registries.CONFIGURED_FEATURE, GarnishedAdditionsForgeMain.asResource(name));
+        return ResourceKey.create(Registries.CONFIGURED_FEATURE, GarnishedAdditionsNeoForgeMain.asResource(name));
     }
 
     public static ResourceKey<PlacedFeature> loadPlacedKey(String name) {
-        return ResourceKey.create(Registries.PLACED_FEATURE, GarnishedAdditionsForgeMain.asResource(name));
+        return ResourceKey.create(Registries.PLACED_FEATURE, GarnishedAdditionsNeoForgeMain.asResource(name));
     }
 
     public static void register(IEventBus bus) {

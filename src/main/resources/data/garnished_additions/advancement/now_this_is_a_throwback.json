@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "create:chromatic_compound"
+      "id": "garnished_additions:chromatic_compound"
     },
     "title": "Now This Is A Throwback!",
     "description": "Obtain your first Chromatic Compound",
@@ -17,16 +17,13 @@
         "items": [
           {
             "items": [
-              "create:chromatic_compound"
-            ],
-            "count": {
-              "min": 1,
-              "max": 64
-            }
+              "create:chromatic_compound",
+              "garnished_additions:chromatic_compound"
+            ]
           }
         ]
       }
     }
   },
-"parent": "garnished_additions:nutception"
+  "parent": "garnished_additions:nutception"
 }

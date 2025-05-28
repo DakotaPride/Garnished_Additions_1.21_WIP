@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "garnished_additions:unholy_buffet"
+      "id": "garnished_additions:unholy_buffet"
     },
     "title": "Is This A Mistake?",
     "description": "Your hubris is astounding (Craft the Unholy Buffet)",

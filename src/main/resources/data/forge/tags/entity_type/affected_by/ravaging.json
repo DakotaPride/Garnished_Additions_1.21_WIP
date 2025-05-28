@@ -1,8 +1,0 @@
-{
-    "replace": false,
-    "values": [
-      "minecraft:piglin_brute",
-      "minecraft:guardian",
-      "minecraft:elder_guardian"
-    ]
-  }

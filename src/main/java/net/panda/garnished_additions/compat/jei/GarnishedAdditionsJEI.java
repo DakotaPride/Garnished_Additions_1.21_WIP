@@ -7,7 +7,8 @@ import mezz.jei.api.JeiPlugin;
 import mezz.jei.api.registration.IRecipeCategoryRegistration;
 import net.minecraft.MethodsReturnNonnullByDefault;
 import net.minecraft.resources.ResourceLocation;
-import net.panda.garnished_additions.GarnishedAdditionsForgeMain;
+import net.panda.garnished_additions.GarnishedAdditionsNeoForgeMain;
+import net.panda.garnished_additions.init.GarnishedAdditionsItemsInit;
 
 import javax.annotation.ParametersAreNonnullByDefault;
 
@@ -19,12 +20,12 @@ import static com.simibubi.create.compat.jei.category.MysteriousItemConversionCa
 @MethodsReturnNonnullByDefault
 public class GarnishedAdditionsJEI implements IModPlugin {
 
-    private static final ResourceLocation ID = GarnishedAdditionsForgeMain.asResource("jei_plugin");
+    private static final ResourceLocation ID = GarnishedAdditionsNeoForgeMain.asResource("jei_plugin");
 
     @Override
     public void registerCategories(IRecipeCategoryRegistration registration) {
-        RECIPES.add(ConversionRecipe.create(AllItems.CHROMATIC_COMPOUND.asStack(), AllItems.SHADOW_STEEL.asStack()));
-        RECIPES.add(ConversionRecipe.create(AllItems.CHROMATIC_COMPOUND.asStack(), AllItems.REFINED_RADIANCE.asStack()));
+        RECIPES.add(ConversionRecipe.create(GarnishedAdditionsItemsInit.CHROMATIC_COMPOUND.asStack(), AllItems.SHADOW_STEEL.asStack()));
+        RECIPES.add(ConversionRecipe.create(GarnishedAdditionsItemsInit.CHROMATIC_COMPOUND.asStack(), AllItems.REFINED_RADIANCE.asStack()));
     }
 
     @Override

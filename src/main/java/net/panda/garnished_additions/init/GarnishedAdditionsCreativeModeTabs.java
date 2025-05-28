@@ -5,16 +5,15 @@ import com.simibubi.create.AllItems;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.CreativeModeTabs;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
-import net.panda.garnished_additions.GarnishedAdditionsForgeMain;
+import net.panda.garnished_additions.GarnishedAdditionsNeoForgeMain;
 
 //@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
 public class GarnishedAdditionsCreativeModeTabs {
    private static final DeferredRegister<CreativeModeTab> REGISTER =
-           DeferredRegister.create(Registries.CREATIVE_MODE_TAB, GarnishedAdditionsForgeMain.MOD_ID);
+           DeferredRegister.create(Registries.CREATIVE_MODE_TAB, GarnishedAdditionsNeoForgeMain.MOD_ID);
 
    public static final DeferredHolder<CreativeModeTab, CreativeModeTab> GARNISHED_ADDITIONS = REGISTER.register("garnished_additions",
            () -> CreativeModeTab.builder()
@@ -31,7 +30,7 @@ public class GarnishedAdditionsCreativeModeTabs {
    private static class RegistrateDisplayItemsGenerator implements CreativeModeTab.DisplayItemsGenerator {
       @Override
       public void accept(CreativeModeTab.ItemDisplayParameters parameters, CreativeModeTab.Output output) {
-         output.accept(AllItems.CHROMATIC_COMPOUND.get());
+         output.accept(GarnishedAdditionsItemsInit.CHROMATIC_COMPOUND.get());
          output.accept(AllItems.REFINED_RADIANCE.get());
          output.accept(AllItems.SHADOW_STEEL.get());
          output.accept(AllBlocks.REFINED_RADIANCE_CASING.get());

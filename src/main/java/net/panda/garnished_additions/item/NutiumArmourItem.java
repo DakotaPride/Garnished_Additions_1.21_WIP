@@ -7,13 +7,13 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.ArmorMaterial;
 import net.minecraft.world.item.ItemStack;
-import net.panda.garnished_additions.GarnishedAdditionsForgeMain;
+import net.panda.garnished_additions.GarnishedAdditionsNeoForgeMain;
 import net.panda.garnished_additions.init.GarnishedAdditionsArmourMaterials;
 import org.jetbrains.annotations.Nullable;
 
 public abstract class NutiumArmourItem extends ArmorItem {
-   ResourceLocation layer1 = GarnishedAdditionsForgeMain.asResource("models/armor/nutium_layer_1.png");
-   ResourceLocation layer2 = GarnishedAdditionsForgeMain.asResource("models/armor/nutium_layer_2.png");
+   ResourceLocation layer1 = GarnishedAdditionsNeoForgeMain.asResource("models/armor/nutium_layer_1.png");
+   ResourceLocation layer2 = GarnishedAdditionsNeoForgeMain.asResource("models/armor/nutium_layer_2.png");
 
    public NutiumArmourItem(Type type, Properties properties) {
       super(GarnishedAdditionsArmourMaterials.NUTIUM, type, properties.fireResistant());

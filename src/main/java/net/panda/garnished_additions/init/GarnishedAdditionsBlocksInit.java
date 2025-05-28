@@ -10,11 +10,11 @@ import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.material.PushReaction;
-import net.panda.garnished_additions.GarnishedAdditionsForgeMain;
+import net.panda.garnished_additions.GarnishedAdditionsNeoForgeMain;
 import net.panda.garnished_additions.block.*;
 
 public class GarnishedAdditionsBlocksInit {
-    private static final CreateRegistrate REGISTRATE = GarnishedAdditionsForgeMain.REGISTRATE;
+    private static final CreateRegistrate REGISTRATE = GarnishedAdditionsNeoForgeMain.REGISTRATE;
 
     public static final BlockEntry<?> NUTIUM_BLOCK = REGISTRATE.block("nutium_block", Block::new)
             .initialProperties(() -> Blocks.NETHERITE_BLOCK)

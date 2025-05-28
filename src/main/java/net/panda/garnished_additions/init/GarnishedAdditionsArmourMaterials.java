@@ -11,14 +11,14 @@ import net.minecraft.world.item.crafting.Ingredient;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
-import net.panda.garnished_additions.GarnishedAdditionsForgeMain;
+import net.panda.garnished_additions.GarnishedAdditionsNeoForgeMain;
 
 import java.util.EnumMap;
 import java.util.List;
 import java.util.function.Supplier;
 
 public class GarnishedAdditionsArmourMaterials {
-    public static final DeferredRegister<ArmorMaterial> ARMOUR_MATERIAL = DeferredRegister.create(Registries.ARMOR_MATERIAL, GarnishedAdditionsForgeMain.MOD_ID);
+    public static final DeferredRegister<ArmorMaterial> ARMOUR_MATERIAL = DeferredRegister.create(Registries.ARMOR_MATERIAL, GarnishedAdditionsNeoForgeMain.MOD_ID);
 
     public static final DeferredHolder<ArmorMaterial, ArmorMaterial> NUTIUM = register(
             "nutium",
@@ -43,7 +43,7 @@ public class GarnishedAdditionsArmourMaterials {
     private static DeferredHolder<ArmorMaterial, ArmorMaterial> register(
             String string, EnumMap<ArmorItem.Type, Integer> enumMap, int i, Holder<SoundEvent> holder, float f, float g, Supplier<Ingredient> supplier
     ) {
-        List<ArmorMaterial.Layer> list = List.of(new ArmorMaterial.Layer(GarnishedAdditionsForgeMain.asResource(string)));
+        List<ArmorMaterial.Layer> list = List.of(new ArmorMaterial.Layer(GarnishedAdditionsNeoForgeMain.asResource(string)));
         return register(string, enumMap, i, holder, f, g, supplier, list);
     }
 

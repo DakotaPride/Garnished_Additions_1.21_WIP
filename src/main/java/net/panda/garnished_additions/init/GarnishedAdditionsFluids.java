@@ -9,7 +9,7 @@ import net.dakotapride.garnished.registry.Fluids;
 import net.dakotapride.garnished.registry.GarnishedFluids;
 import net.minecraft.resources.ResourceLocation;
 import net.neoforged.neoforge.fluids.BaseFlowingFluid;
-import net.panda.garnished_additions.GarnishedAdditionsForgeMain;
+import net.panda.garnished_additions.GarnishedAdditionsNeoForgeMain;
 
 public class GarnishedAdditionsFluids implements Fluids {
     public static final FluidEntry<BaseFlowingFluid.Flowing> ETHEREAL_SAP =
@@ -45,11 +45,11 @@ public class GarnishedAdditionsFluids implements Fluids {
             getMotion = "_still";
         }
 
-        return GarnishedAdditionsForgeMain.asResource("fluid/" + fluid + getMotion);
+        return GarnishedAdditionsNeoForgeMain.asResource("fluid/" + fluid + getMotion);
     }
 
     public static FluidBuilder<BaseFlowingFluid.Flowing, CreateRegistrate> standardFluid(String name, FluidBuilder.FluidTypeFactory typeFactory) {
-        return GarnishedAdditionsForgeMain.REGISTRATE.fluid(name, createLocation(name, false), createLocation(name, true), typeFactory);
+        return GarnishedAdditionsNeoForgeMain.REGISTRATE.fluid(name, createLocation(name, false), createLocation(name, true), typeFactory);
     }
 
     public static void register() {}

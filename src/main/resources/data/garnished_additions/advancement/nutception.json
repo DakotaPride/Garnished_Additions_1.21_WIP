@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "garnished_additions:ungarnished_nut_mix"
+      "id": "garnished_additions:ungarnished_nut_mix"
     },
     "title": "Nutception",
     "description": "Make your first Nut Mix",
