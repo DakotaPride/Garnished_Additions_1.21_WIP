@@ -6,6 +6,6 @@ import net.panda.garnished_additions.init.GarnishedAdditionsTiers;
 
 public class NutiumSwordItem extends SwordItem {
    public NutiumSwordItem(Properties properties) {
-      super(Tiers.NETHERITE, properties.fireResistant());
+      super(GarnishedAdditionsTiers.NUTIUM, properties.fireResistant());
    }
 }

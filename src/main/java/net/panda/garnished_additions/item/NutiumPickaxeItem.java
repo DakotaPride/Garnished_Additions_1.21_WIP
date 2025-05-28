@@ -6,6 +6,6 @@ import net.panda.garnished_additions.init.GarnishedAdditionsTiers;
 
 public class NutiumPickaxeItem extends PickaxeItem {
    public NutiumPickaxeItem(Properties properties) {
-      super(Tiers.NETHERITE, properties.fireResistant());
+      super(GarnishedAdditionsTiers.NUTIUM, properties.fireResistant());
    }
 }
