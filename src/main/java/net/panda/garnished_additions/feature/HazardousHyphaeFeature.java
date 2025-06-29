@@ -28,6 +28,7 @@ public class HazardousHyphaeFeature extends Feature<NoneFeatureConfiguration> {
      * that they can safely generate into.
      * @param ctx A context object with a reference to the level and the position the feature is being placed at
      */
+    @Override
     public boolean place(FeaturePlaceContext<NoneFeatureConfiguration> ctx) {
         WorldGenLevel worldgenlevel = ctx.level();
         BlockPos blockpos = ctx.origin();
@@ -35,8 +36,13 @@ public class HazardousHyphaeFeature extends Feature<NoneFeatureConfiguration> {
         if (!worldgenlevel.isEmptyBlock(blockpos)) {
             return false;
         } else {
-            this.placeRoofHazardousHyphae(worldgenlevel, randomsource, blockpos);
-            return true;
+            BlockState blockstate = worldgenlevel.getBlockState(blockpos.above());
+            if (!blockstate.is(Blocks.SOUL_SAND) && !blockstate.is(Blocks.SOUL_SOIL)) {
+                return false;
+            } else {
+                this.placeRoofHazardousHyphae(worldgenlevel, randomsource, blockpos);
+                return true;
+            }
         }
     }
 
@@ -51,16 +57,19 @@ public class HazardousHyphaeFeature extends Feature<NoneFeatureConfiguration> {
                     random.nextInt(8) - random.nextInt(8)
             );
             if (level.isEmptyBlock(blockpos$mutableblockpos)) {
-                int j = Mth.nextInt(random, 1, 8);
-                if (random.nextInt(6) == 0) {
-                    j *= 2;
-                }
+                BlockState blockstate = level.getBlockState(blockpos$mutableblockpos.above());
+                if (blockstate.is(Blocks.SOUL_SAND) || blockstate.is(Blocks.SOUL_SOIL)) {
+                    int j = Mth.nextInt(random, 1, 8);
+                    if (random.nextInt(6) == 0) {
+                        j *= 2;
+                    }
 
-                if (random.nextInt(5) == 0) {
-                    j = 1;
-                }
+                    if (random.nextInt(5) == 0) {
+                        j = 1;
+                    }
 
-                placeHazardousHyphaeColumn(level, random, blockpos$mutableblockpos, j, 17, 25);
+                    placeHazardousHyphaeColumn(level, random, blockpos$mutableblockpos, j, 17, 25);
+                }
             }
         }
 

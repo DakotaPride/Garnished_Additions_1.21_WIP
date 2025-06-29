@@ -7,7 +7,9 @@ import net.minecraft.util.Mth;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.WorldGenLevel;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.GrowingPlantHeadBlock;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.FeaturePlaceContext;
 import net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration;
@@ -26,6 +28,7 @@ public class LethalLianaFeature extends Feature<NoneFeatureConfiguration> {
      * that they can safely generate into.
      * @param ctx A context object with a reference to the level and the position the feature is being placed at
      */
+    @Override
     public boolean place(FeaturePlaceContext<NoneFeatureConfiguration> ctx) {
         WorldGenLevel worldgenlevel = ctx.level();
         BlockPos blockpos = ctx.origin();
@@ -33,12 +36,17 @@ public class LethalLianaFeature extends Feature<NoneFeatureConfiguration> {
         if (!worldgenlevel.isEmptyBlock(blockpos)) {
             return false;
         } else {
-            this.placeRoofHazardousHyphae(worldgenlevel, randomsource, blockpos);
-            return true;
+            BlockState blockstate = worldgenlevel.getBlockState(blockpos.above());
+            if (!blockstate.is(Blocks.BASALT) && !blockstate.is(Blocks.BLACKSTONE)) {
+                return false;
+            } else {
+                this.placeRoofLethalLiana(worldgenlevel, randomsource, blockpos);
+                return true;
+            }
         }
     }
 
-    private void placeRoofHazardousHyphae(LevelAccessor level, RandomSource random, BlockPos pos) {
+    private void placeRoofLethalLiana(LevelAccessor level, RandomSource random, BlockPos pos) {
         BlockPos.MutableBlockPos blockpos$mutableblockpos = new BlockPos.MutableBlockPos();
 
         for (int i = 0; i < 100; i++) {
@@ -49,22 +57,25 @@ public class LethalLianaFeature extends Feature<NoneFeatureConfiguration> {
                     random.nextInt(8) - random.nextInt(8)
             );
             if (level.isEmptyBlock(blockpos$mutableblockpos)) {
-                int j = Mth.nextInt(random, 1, 8);
-                if (random.nextInt(6) == 0) {
-                    j *= 2;
-                }
+                BlockState blockstate = level.getBlockState(blockpos$mutableblockpos.above());
+                if (blockstate.is(Blocks.BASALT) || blockstate.is(Blocks.BLACKSTONE)) {
+                    int j = Mth.nextInt(random, 1, 8);
+                    if (random.nextInt(6) == 0) {
+                        j *= 2;
+                    }
 
-                if (random.nextInt(5) == 0) {
-                    j = 1;
-                }
+                    if (random.nextInt(5) == 0) {
+                        j = 1;
+                    }
 
-                placeHazardousHyphaeColumn(level, random, blockpos$mutableblockpos, j, 17, 25);
+                    placeLethalLianaColumn(level, random, blockpos$mutableblockpos, j, 17, 25);
+                }
             }
         }
 
     }
 
-    public static void placeHazardousHyphaeColumn(LevelAccessor level, RandomSource random, BlockPos.MutableBlockPos pos, int height, int minAge, int maxAge) {
+    public static void placeLethalLianaColumn(LevelAccessor level, RandomSource random, BlockPos.MutableBlockPos pos, int height, int minAge, int maxAge) {
         for (int i = 0; i <= height; i++) {
             if (level.isEmptyBlock(pos)) {
                 if (i == height || !level.isEmptyBlock(pos.below())) {

@@ -17,7 +17,7 @@
       "conditions": {
         "items": [
           {
-            "tag": "garnished_additions:nut_mixes"
+            "items": "#garnished_additions:nut_mixes"
           }
         ]
       }
