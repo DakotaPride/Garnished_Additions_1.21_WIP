@@ -6,7 +6,7 @@
     }
   ],
   "type": "botanypots:block_derived_crop",
-  "block": "garnished_additions:hazardous_hyphae",
+  "block": "garnished_additions:lethal_liana",
   "soil": {
     "type": "bookshelf:either",
     "fabric:type": "bookshelf:either",
@@ -20,7 +20,7 @@
         "tag": "botanypots:soil/nether"
       },
       {
-        "tag": "botanypots:soil/soul_sand"
+        "tag": "c:basalt"
       }
     ]
   },
@@ -28,7 +28,7 @@
     {
       "type": "botanypots:simple",
       "block_state": {
-        "block": "garnished_additions:hazardous_hyphae_plant"
+        "block": "garnished_additions:lethal_liana_plant"
       },
       "options": {
         "rotation": "X_180"
@@ -37,7 +37,7 @@
     {
       "type": "botanypots:simple",
       "block_state": {
-        "block": "garnished_additions:hazardous_hyphae",
+        "block": "garnished_additions:lethal_liana",
         "properties": {
           "age": "25"
         }

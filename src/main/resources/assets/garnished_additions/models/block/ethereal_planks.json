@@ -1,8 +1,6 @@
 {
-  "parent": "block/cube_all",
+  "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "garnished_additions:block/ethereal_planks",
-    "particle": "garnished_additions:block/ethereal_planks"
-  },
-  "render_type": "solid"
+    "all": "garnished_additions:block/ethereal_planks"
+  }
 }

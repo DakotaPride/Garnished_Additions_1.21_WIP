@@ -1,5 +1,5 @@
 {
-  "parent": "block/cross",
+  "parent": "minecraft:block/cross",
   "textures": {
     "cross": "garnished_additions:block/ethereal_bush_stage2",
     "particle": "garnished_additions:block/ethereal_bush_stage2"

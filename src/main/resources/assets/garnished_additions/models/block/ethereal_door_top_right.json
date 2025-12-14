@@ -1,5 +1,5 @@
 {
-  "parent": "block/door_top_right",
+  "parent": "minecraft:block/door_top_right",
   "textures": {
     "particle": "garnished_additions:block/ethereal_door_bottom",
     "bottom": "garnished_additions:block/ethereal_door_bottom",

@@ -1,5 +1,5 @@
 {
-  "parent": "block/cross",
+  "parent": "minecraft:block/cross",
   "textures": {
     "cross": "garnished_additions:block/lethal_liana",
     "particle": "garnished_additions:block/lethal_liana"

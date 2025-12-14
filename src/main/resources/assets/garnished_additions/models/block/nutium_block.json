@@ -8,6 +8,5 @@
     "south": "garnished_additions:block/nutium_block_side",
     "west": "garnished_additions:block/nutium_block_side",
     "particle": "garnished_additions:block/nutium_block_bottom"
-  },
-  "render_type": "solid"
+  }
 }

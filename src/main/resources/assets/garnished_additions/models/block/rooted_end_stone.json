@@ -1,13 +1,6 @@
 {
-  "parent": "block/cube",
+  "parent": "minecraft:block/cube_all",
   "textures": {
-    "down": "garnished_additions:block/ethereal_rooted_end_stone",
-    "up": "garnished_additions:block/ethereal_rooted_end_stone",
-    "north": "garnished_additions:block/ethereal_rooted_end_stone",
-    "east": "garnished_additions:block/ethereal_rooted_end_stone",
-    "south": "garnished_additions:block/ethereal_rooted_end_stone",
-    "west": "garnished_additions:block/ethereal_rooted_end_stone",
-    "particle": "garnished_additions:block/ethereal_rooted_end_stone"
-  },
-  "render_type": "solid"
+    "all": "garnished_additions:block/ethereal_rooted_end_stone"
+  }
 }

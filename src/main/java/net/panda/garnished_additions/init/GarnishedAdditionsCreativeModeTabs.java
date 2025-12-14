@@ -196,6 +196,8 @@ public class GarnishedAdditionsCreativeModeTabs {
          output.accept(GarnishedAdditionsBlocksInit.STARDUST_BLOCK.get());
          output.accept(GarnishedAdditionsItemsInit.ULTRADENSE_FUEL.get());
          output.accept(GarnishedAdditionsItemsInit.BIOFUEL.get());
+         output.accept(GarnishedAdditionsFluids.ETHEREAL_SAP.get().getBucket());
+         output.accept(GarnishedAdditionsFluids.ETHEREAL_SYRUP.get().getBucket());
       }
    }
 }
