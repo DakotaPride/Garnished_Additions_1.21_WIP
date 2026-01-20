@@ -1,0 +1,19 @@
+{
+  "values": {
+    "garnished_additions:biofuel": {
+      "burn_time": 1800
+    },
+    "garnished_additions:stardust": {
+      "burn_time": 3000
+    },
+    "garnished_additions:stellar_husk": {
+      "burn_time": 3000
+    },
+    "garnished_additions:stellar_core": {
+      "burn_time": 3000
+    },
+    "garnished_additions:ultradense_fuel": {
+      "burn_time": 2400
+    }
+  }
+}

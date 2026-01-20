@@ -1,0 +1,18 @@
+{
+  "replace": false,
+  "values": [
+    "#minecraft:dirt",
+    "minecraft:netherrack",
+    "minecraft:basalt",
+    "minecraft:blackstone",
+    "minecraft:soul_sand",
+    "minecraft:soul_soil",
+    "minecraft:warped_nylium",
+    "minecraft:crimson_nylium",
+    "minecraft:nether_wart_block",
+    "minecraft:warped_wart_block",
+    "garnished:sepia_wart_block",
+    "garnished_additions:lethal_liana",
+    "garnished_additions:lethal_liana_plant"
+  ]
+}

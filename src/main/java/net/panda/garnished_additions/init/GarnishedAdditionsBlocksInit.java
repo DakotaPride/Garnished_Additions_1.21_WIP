@@ -21,16 +21,18 @@ public class GarnishedAdditionsBlocksInit {
             .properties(p -> p.mapColor(MapColor.NETHER))
             .simpleItem()
             .register();
-    public static final BlockEntry<?> ETHEREAL_WOOD = REGISTRATE.block("ethereal_wood", RotatedPillarBlock::new)
+    public static final BlockEntry<?> ETHEREAL_WOOD = REGISTRATE.block("ethereal_wood",
+                    properties -> etherealLog(MapColor.COLOR_BLACK, MapColor.COLOR_BLACK))
             .initialProperties(() -> Blocks.OAK_WOOD)
             .simpleItem().register();
     public static final BlockEntry<?> ETHEREAL_LOG = REGISTRATE.block("ethereal_log",
-            properties -> log(MapColor.COLOR_PURPLE, MapColor.COLOR_BLACK))
+                    properties -> etherealLog(MapColor.COLOR_PURPLE, MapColor.COLOR_BLACK))
+            .initialProperties(() -> Blocks.OAK_LOG)
             .simpleItem().register();
     public static final BlockEntry<?> ETHEREAL_PLANKS = REGISTRATE.block("ethereal_planks", Block::new)
             .initialProperties(() -> Blocks.OAK_PLANKS)
             .simpleItem().register();
-    public static final BlockEntry<?> ETHEREAL_LEAVES = REGISTRATE.block("ethereal_leaves", LeavesBlock::new)
+    public static final BlockEntry<?> ETHEREAL_LEAVES = REGISTRATE.block("ethereal_leaves", EtherealLeavesBlock::new)
             .initialProperties(() -> Blocks.OAK_LEAVES)
             .properties(p -> p.mapColor(MapColor.COLOR_PURPLE))
             .simpleItem().register();
@@ -62,7 +64,7 @@ public class GarnishedAdditionsBlocksInit {
     public static final BlockEntry<?> STRIPPED_ETHEREAL_WOOD = REGISTRATE.block("stripped_ethereal_wood", RotatedPillarBlock::new)
             .simpleItem().register();
     public static final BlockEntry<?> STRIPPED_ETHEREAL_LOG = REGISTRATE.block("stripped_ethereal_log",
-            properties -> log(MapColor.COLOR_PURPLE, MapColor.COLOR_PURPLE))
+            properties -> etherealLog(MapColor.COLOR_PURPLE, MapColor.COLOR_PURPLE))
             .simpleItem().register();
     public static final BlockEntry<?> ETHEREAL_DOOR = REGISTRATE.block("ethereal_door", EtherealDoorBlock::new)
             .initialProperties(() -> Blocks.OAK_DOOR)
@@ -92,8 +94,8 @@ public class GarnishedAdditionsBlocksInit {
     public static final BlockEntry<?> STARDUST_BLOCK = REGISTRATE.block("stardust_block", StardustBlock::new)
             .simpleItem().register();
 
-   private static RotatedPillarBlock log(MapColor topMapColor, MapColor sideMapColor) {
-      return new RotatedPillarBlock(BlockBehaviour.Properties.of().mapColor((state) ->
+   private static RotatedPillarBlock etherealLog(MapColor topMapColor, MapColor sideMapColor) {
+      return new EtherealLogBlock(BlockBehaviour.Properties.of().mapColor((state) ->
               state.getValue(RotatedPillarBlock.AXIS) == Direction.Axis.Y ? topMapColor : sideMapColor)
               .instrument(NoteBlockInstrument.BASS).strength(2.0F).sound(SoundType.WOOD).ignitedByLava());
    }

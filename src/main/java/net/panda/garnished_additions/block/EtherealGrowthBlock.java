@@ -11,7 +11,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.BonemealableBlock;
 import net.minecraft.world.level.block.SaplingBlock;
 import net.minecraft.world.level.block.state.BlockState;
-import net.panda.garnished_additions.init.GarnishedAdditionsTags;
+import net.panda.garnished_additions.GarnishedAdditionsTags;
 
 public class EtherealGrowthBlock extends SaplingBlock implements BonemealableBlock, IDesolateSpread {
    public EtherealGrowthBlock(Properties properties) {
@@ -20,7 +20,7 @@ public class EtherealGrowthBlock extends SaplingBlock implements BonemealableBlo
 
    @Override
    protected boolean mayPlaceOn(BlockState pState, BlockGetter pLevel, BlockPos pPos) {
-      return pState.is(GarnishedAdditionsTags.CAN_PLACE_ETHEREAL_PLANT_ON);
+      return pState.is(GarnishedAdditionsTags.BlockTags.CAN_PLACE_ETHEREAL_PLANT_ON.getTag());
    }
 
    @Override

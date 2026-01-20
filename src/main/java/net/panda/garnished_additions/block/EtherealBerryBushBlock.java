@@ -3,13 +3,11 @@ package net.panda.garnished_additions.block;
 import com.mojang.serialization.MapCodec;
 import net.dakotapride.garnished.block.IDesolateSpread;
 import net.minecraft.core.BlockPos;
-import net.minecraft.core.Direction;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.particles.SimpleParticleType;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
-import net.minecraft.tags.BlockTags;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
@@ -23,7 +21,8 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelReader;
-import net.minecraft.world.level.block.*;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.BushBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
@@ -35,8 +34,8 @@ import net.minecraft.world.phys.HitResult;
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
+import net.panda.garnished_additions.GarnishedAdditionsTags;
 import net.panda.garnished_additions.init.GarnishedAdditionsItemsInit;
-import net.panda.garnished_additions.init.GarnishedAdditionsTags;
 
 public class EtherealBerryBushBlock extends BushBlock implements IDesolateSpread {
    public static final MapCodec<EtherealBerryBushBlock> CODEC = simpleCodec(EtherealBerryBushBlock::new);
@@ -57,7 +56,7 @@ public class EtherealBerryBushBlock extends BushBlock implements IDesolateSpread
    }
 
    protected boolean mayPlaceOn(BlockState pState, BlockGetter pLevel, BlockPos pPos) {
-      return pState.is(GarnishedAdditionsTags.CAN_PLACE_ETHEREAL_PLANT_ON);
+      return pState.is(GarnishedAdditionsTags.BlockTags.CAN_PLACE_ETHEREAL_PLANT_ON.getTag());
    }
 
    @Override

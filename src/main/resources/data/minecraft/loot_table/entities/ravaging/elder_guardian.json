@@ -5,7 +5,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "garnished_additions:raw_guardian",
+          "name": "garnished_additions:raw_elder_guardian",
           "functions": [
             {
               "function": "minecraft:set_count",

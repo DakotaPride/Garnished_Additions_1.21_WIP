@@ -16,7 +16,7 @@ public abstract class NutiumArmourItem extends ArmorItem {
    ResourceLocation layer2 = GarnishedAdditionsNeoForgeMain.asResource("models/armor/nutium_layer_2.png");
 
    public NutiumArmourItem(Type type, Properties properties) {
-      super(GarnishedAdditionsArmourMaterials.NUTIUM, type, properties.fireResistant());
+      super(GarnishedAdditionsArmourMaterials.NUTIUM, type, properties.fireResistant().stacksTo(1));
    }
 
    @Override
@@ -26,7 +26,7 @@ public abstract class NutiumArmourItem extends ArmorItem {
 
    public static class Boots extends NutiumArmourItem {
       public Boots(Properties properties) {
-         super(Type.BOOTS, properties.fireResistant());
+         super(Type.BOOTS, properties);
       }
 
       @Override
@@ -38,7 +38,7 @@ public abstract class NutiumArmourItem extends ArmorItem {
 
    public static class Leggings extends NutiumArmourItem {
       public Leggings(Properties properties) {
-         super(Type.LEGGINGS, properties.fireResistant());
+         super(Type.LEGGINGS, properties);
       }
 
       @Override
@@ -50,7 +50,7 @@ public abstract class NutiumArmourItem extends ArmorItem {
 
    public static class Chestplate extends NutiumArmourItem {
       public Chestplate(Properties properties) {
-         super(Type.CHESTPLATE, properties.fireResistant());
+         super(Type.CHESTPLATE, properties);
       }
 
       @Override
@@ -61,7 +61,7 @@ public abstract class NutiumArmourItem extends ArmorItem {
 
    public static class Helmet extends NutiumArmourItem {
       public Helmet(Properties properties) {
-         super(Type.HELMET, properties.fireResistant());
+         super(Type.HELMET, properties);
       }
 
       @Override

@@ -9,7 +9,10 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.packs.PackType;
 import net.minecraft.server.packs.repository.Pack;
 import net.minecraft.server.packs.repository.PackSource;
+import net.minecraft.world.item.AxeItem;
 import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -26,6 +29,10 @@ import net.neoforged.neoforge.event.server.ServerStartingEvent;
 import net.panda.garnished_additions.init.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.util.LinkedHashSet;
+import java.util.Map;
+import java.util.Set;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod("garnished_additions")
@@ -60,7 +67,7 @@ public class GarnishedAdditionsNeoForgeMain {
 
         REGISTRATE.registerEventListeners(eventBus);
         // Register the setup method for modloading
-        eventBus.addListener(this::setup);
+        //eventBus.addListener(this::setup);
         // Register the enqueueIMC method for modloading
         eventBus.addListener(this::enqueueIMC);
         // Register the processIMC method for modloading
@@ -72,11 +79,14 @@ public class GarnishedAdditionsNeoForgeMain {
 
     // public static void onRegister(final RegisterEvent event) {}
 
-    private void setup(FMLCommonSetupEvent event) {
-
-        //event.enqueueWork(GarnishedAdditionsFluids::registerFluidInteractions);
-
-    }
+//    private void setup(FMLCommonSetupEvent event) {
+//        event.enqueueWork(() -> {
+//            Map<Block, Block> map = new LinkedHashSet<>(AxeItem.STRIPPABLES);
+//            map.put(GarnishedAdditionsBlocksInit.ETHEREAL_LOG.get(), GarnishedAdditionsBlocksInit.STRIPPED_ETHEREAL_LOG.get());
+//            map.put(GarnishedAdditionsBlocksInit.ETHEREAL_WOOD.get(), GarnishedAdditionsBlocksInit.STRIPPED_ETHEREAL_WOOD.get());
+//            AxeItem.STRIPPABLES = map;
+//        });
+//    }
 
     private void enqueueIMC(final InterModEnqueueEvent event) {
         // Some example code to dispatch IMC to another mod

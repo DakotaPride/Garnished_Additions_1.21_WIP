@@ -2,7 +2,6 @@ package net.panda.garnished_additions.block;
 
 import com.mojang.serialization.MapCodec;
 import net.dakotapride.garnished.block.ISenileSpread;
-import net.minecraft.BlockUtil;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.particles.ParticleTypes;
@@ -20,9 +19,8 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.material.PushReaction;
 import net.minecraft.world.phys.shapes.VoxelShape;
+import net.panda.garnished_additions.GarnishedAdditionsTags;
 import net.panda.garnished_additions.init.GarnishedAdditionsBlocksInit;
-
-import java.util.Optional;
 
 public class HazardousHyphaeBlock extends GrowingPlantHeadBlock implements ISenileSpread {
    public static final MapCodec<HazardousHyphaeBlock> CODEC = simpleCodec(HazardousHyphaeBlock::new);
@@ -31,6 +29,12 @@ public class HazardousHyphaeBlock extends GrowingPlantHeadBlock implements ISeni
       super(Properties.of().mapColor(MapColor.COLOR_BLACK).sound(SoundType.GRASS)
                       .instabreak().speedFactor(0.6F).jumpFactor(0.6F).noCollission().offsetType(OffsetType.NONE).pushReaction(PushReaction.DESTROY),
               Direction.DOWN, SHAPE, false, 0.1D);
+   }
+
+
+   @Override
+   protected boolean canSurvive(BlockState state, LevelReader level, BlockPos pos) {
+      return level.getBlockState(pos.above()).is(GarnishedAdditionsTags.BlockTags.CAN_PLACE_HAZARDOUS_HYPHAE_ON.getTag());
    }
 
    @Override
@@ -74,8 +78,8 @@ public class HazardousHyphaeBlock extends GrowingPlantHeadBlock implements ISeni
       int i = Math.min(blockState.getValue(AGE) + 1, 25);
       int j = this.getBlocksToGrowWhenBonemealed(randomSource);
 
-      for(int k = 0; k < j && this.canGrowInto(serverLevel.getBlockState(blockpos)); ++k) {
-         serverLevel.setBlockAndUpdate(blockpos, blockState.setValue(AGE, Integer.valueOf(i)));
+      for (int k = 0; k < j && this.canGrowInto(serverLevel.getBlockState(blockpos)); k++) {
+         serverLevel.setBlockAndUpdate(blockpos, blockState.setValue(AGE, i));
          blockpos = blockpos.relative(this.growthDirection);
          i = Math.min(i + 1, 25);
       }

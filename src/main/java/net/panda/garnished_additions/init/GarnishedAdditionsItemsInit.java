@@ -1,5 +1,6 @@
 package net.panda.garnished_additions.init;
 
+import com.simibubi.create.content.equipment.tool.AllToolMaterials;
 import com.simibubi.create.content.legacy.ChromaticCompoundColor;
 import com.simibubi.create.content.legacy.ChromaticCompoundItem;
 import com.simibubi.create.content.processing.sequenced.SequencedAssemblyItem;
@@ -8,6 +9,7 @@ import com.simibubi.create.foundation.data.CreateRegistrate;
 import com.tterrag.registrate.util.entry.ItemEntry;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Rarity;
+import net.minecraft.world.item.SwordItem;
 import net.panda.garnished_additions.GarnishedAdditionsNeoForgeMain;
 import net.panda.garnished_additions.item.*;
 
@@ -27,11 +29,16 @@ public class GarnishedAdditionsItemsInit {
     public static final ItemEntry<?> NUTIUM_BOOTS = REGISTRATE.item("nutium_boots", NutiumArmourItem.Boots::new).register();
     public static final ItemEntry<?> NUTIUM_INGOT = REGISTRATE.item("nutium_ingot", NutiumIngotItem::new).register();
     public static final ItemEntry<?> MELTED_CINDER_FLOUR_NUT_MIX = REGISTRATE.item("melted_cinder_flour_nut_mix", MeltedCinderFlourNutMixItem::new).register();
-    public static final ItemEntry<?> NUTIUM_PICKAXE = REGISTRATE.item("nutium_pickaxe", NutiumPickaxeItem::new).register();
-    public static final ItemEntry<?> NUTIUM_AXE = REGISTRATE.item("nutium_axe", NutiumAxeItem::new).register();
-    public static final ItemEntry<?> NUTIUM_SWORD = REGISTRATE.item("nutium_sword", NutiumSwordItem::new).register();
-    public static final ItemEntry<?> NUTIUM_SHOVEL = REGISTRATE.item("nutium_shovel", NutiumShovelItem::new).register();
-    public static final ItemEntry<?> NUTIUM_HOE = REGISTRATE.item("nutium_hoe", NutiumHoeItem::new).register();
+    public static final ItemEntry<?> NUTIUM_PICKAXE = REGISTRATE.item("nutium_pickaxe", NutiumPickaxeItem::new)
+            .properties(p -> p.attributes(SwordItem.createAttributes(GarnishedAdditionsTiers.NUTIUM, 1.0F, -2.8F))).register();
+    public static final ItemEntry<?> NUTIUM_AXE = REGISTRATE.item("nutium_axe", NutiumAxeItem::new)
+            .properties(p -> p.attributes(SwordItem.createAttributes(GarnishedAdditionsTiers.NUTIUM, 5.0F, -3.0F))).register();
+    public static final ItemEntry<?> NUTIUM_SWORD = REGISTRATE.item("nutium_sword", NutiumSwordItem::new)
+            .properties(p -> p.attributes(SwordItem.createAttributes(GarnishedAdditionsTiers.NUTIUM, 3, -2.4F))).register();
+    public static final ItemEntry<?> NUTIUM_SHOVEL = REGISTRATE.item("nutium_shovel", NutiumShovelItem::new)
+            .properties(p -> p.attributes(SwordItem.createAttributes(GarnishedAdditionsTiers.NUTIUM, 1.5F, -3.0F))).register();
+    public static final ItemEntry<?> NUTIUM_HOE = REGISTRATE.item("nutium_hoe", NutiumHoeItem::new)
+            .properties(p -> p.attributes(SwordItem.createAttributes(GarnishedAdditionsTiers.NUTIUM, -4.0F, 0.0F))).register();
     public static final ItemEntry<?> GARNISHED_NUT_MIX = REGISTRATE.item("garnished_nut_mix", GarnishedNutMixItem::new).register();
     public static final ItemEntry<?> SWEETENED_NUT_MIX = REGISTRATE.item("sweetened_nut_mix", SweetenedNutMixItem::new).register();
     public static final ItemEntry<?> CHOCOLATE_NUT_MIX = REGISTRATE.item("chocolate_nut_mix", ChocolateNutMixItem::new).register();
@@ -161,8 +168,8 @@ public class GarnishedAdditionsItemsInit {
     public static final ItemEntry<?> RAW_HOGLIN = REGISTRATE.item("raw_hoglin", HoglinMeatItem::new).register();
     public static final ItemEntry<?> COOKED_HOGLIN = REGISTRATE.item("cooked_hoglin", CookedHoglinItem::new).register();
     public static final ItemEntry<?> DANGER_NOODLES = REGISTRATE.item("danger_noodles", DangerNoodlesItem::new).register();
-    public static final ItemEntry<?> SPICE_COMPOUND = REGISTRATE.item("spice_compound", SpiceCompoundItem::new).register();
-    public static final ItemEntry<?> SPICE_POWDER = REGISTRATE.item("spice_powder", SpicePowderItem::new).register();
+    public static final ItemEntry<?> SPICE_COMPOUND = REGISTRATE.item("spice_compound", Item::new).initialProperties(() -> new Item.Properties().fireResistant()).register();
+    public static final ItemEntry<?> SPICE_POWDER = REGISTRATE.item("spice_powder", Item::new).initialProperties(() -> new Item.Properties().fireResistant()).register();
     //      public static final ItemEntry<?> LETHAL_LIANA = block(GarnishedAdditionsBlocksInit.LETHAL_LIANA);
 //      public static final ItemEntry<?> LETHAL_LIANA_BOTTOM = block(GarnishedAdditionsBlocksInit.LETHAL_LIANA_BOTTOM);
 //      public static final ItemEntry<?> HAZARDOUS_HYPHAE = block(GarnishedAdditionsBlocksInit.HAZARDOUS_HYPHAE);
@@ -188,16 +195,16 @@ public class GarnishedAdditionsItemsInit {
     public static final ItemEntry<?> SEAFOOD_SALAD = REGISTRATE.item("seafood_salad", SeafoodSaladItem::new).register();
     public static final ItemEntry<?> UNHOLY_BUFFET = REGISTRATE.item("unholy_buffet", UnholyBuffetItem::new).register();
     public static final ItemEntry<?> SASHIMI = REGISTRATE.item("sashimi", SashimiItem::new).register();
-    public static final ItemEntry<?> BIOFUEL = REGISTRATE.item("biofuel", BiofuelItem::new).register();
+    public static final ItemEntry<?> BIOFUEL = REGISTRATE.item("biofuel", Item::new).register();
     public static final ItemEntry<?> NUT_POWDER = REGISTRATE.item("nut_powder", Item::new).register();
-    public static final ItemEntry<?> STARDUST = REGISTRATE.item("stardust", StardustItem::new).register();
+    public static final ItemEntry<?> STARDUST = REGISTRATE.item("stardust", Item::new).register();
     //public static final ItemEntry<?> STARDUST_BLOCK = block(GarnishedAdditionsBlocksInit.STARDUST_BLOCK);
-    public static final ItemEntry<?> STELLAR_HUSK = REGISTRATE.item("stellar_husk", StellarHuskItem::new).register();
+    public static final ItemEntry<?> STELLAR_HUSK = REGISTRATE.item("stellar_husk", Item::new).initialProperties(() -> new Item.Properties().fireResistant().rarity(Rarity.UNCOMMON)).register();
     public static final ItemEntry<?> STELLAR_CORE = REGISTRATE.item("stellar_core", StellarCoreItem::new).register();
     public static final ItemEntry<?> IRONNUT = REGISTRATE.item("ironnut", IronnutItem::new).register();
     public static final ItemEntry<?> IRONNUT_POWDER = REGISTRATE.item("ironnut_powder", Item::new).register();
     public static final ItemEntry<?> ETHEREAL_ESSENCE = REGISTRATE.item("ethereal_essence", Item::new).register();
-    public static final ItemEntry<?> ULTRADENSE_FUEL = REGISTRATE.item("ultradense_fuel", UltradenseFuelItem::new).register();
+    public static final ItemEntry<?> ULTRADENSE_FUEL = REGISTRATE.item("ultradense_fuel", Item::new).initialProperties(() -> new Item.Properties().fireResistant().rarity(Rarity.UNCOMMON)).register();
     public static final ItemEntry<?> RIBS = REGISTRATE.item("ribs", RibsItem::new).register();
     public static final ItemEntry<?> COOKED_RIBS = REGISTRATE.item("cooked_ribs", CookedRibsItem::new).register();
     public static final ItemEntry<?> SEASONED_RIBS = REGISTRATE.item("seasoned_ribs", SeasonedRibsItem::new).register();

@@ -1,0 +1,16 @@
+{
+  "values": {
+    "#garnished_additions:nut_mixes": {
+      "burn_time": 1600
+    },
+    "garnished_additions:ironnut": {
+      "burn_time": 1600
+    },
+    "garnished_additions:ironnut_powder": {
+      "burn_time": 1600
+    },
+    "garnished_additions:nut_powder": {
+      "burn_time": 1600
+    }
+  }
+}
