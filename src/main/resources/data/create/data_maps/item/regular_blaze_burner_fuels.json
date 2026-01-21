@@ -3,14 +3,32 @@
     "#garnished_additions:nut_mixes": {
       "burn_time": 1600
     },
-    "garnished_additions:ironnut": {
-      "burn_time": 1600
-    },
-    "garnished_additions:ironnut_powder": {
-      "burn_time": 1600
+    "garnished_additions:biofuel": {
+      "burn_time": 3600
     },
     "garnished_additions:nut_powder": {
-      "burn_time": 1600
+      "burn_time": 1200
+    },
+    "garnished_additions:stardust": {
+      "burn_time": 4800
+    },
+    "garnished_additions:stellar_husk": {
+      "burn_time": 4800
+    },
+    "garnished_additions:stellar_core": {
+      "burn_time": 4800
+    },
+    "garnished_additions:ironnut": {
+      "burn_time": 3600
+    },
+    "garnished_additions:ironnut_powder": {
+      "burn_time": 2400
+    },
+    "garnished_additions:ethereal_essence": {
+      "burn_time": 3000
+    },
+    "garnished_additions:ultradense_fuel": {
+      "burn_time": 4200
     }
   }
 }
