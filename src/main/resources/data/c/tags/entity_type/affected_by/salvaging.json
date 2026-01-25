@@ -1,7 +1,6 @@
 {
   "replace": false,
   "values": [
-    "minecraft:strider",
-    "minecraft:cow"
+    "minecraft:strider"
   ]
 }
