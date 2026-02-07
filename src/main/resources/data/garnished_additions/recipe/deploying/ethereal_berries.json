@@ -1,0 +1,16 @@
+{
+  "type": "create:deploying",
+  "ingredients": [
+    {
+      "tag": "garnished:berries"
+    },
+    {
+      "item": "garnished:mastic_paste_purple"
+    }
+  ],
+  "results": [
+    {
+      "id": "garnished_additions:ethereal_berries"
+    }
+  ]
+}

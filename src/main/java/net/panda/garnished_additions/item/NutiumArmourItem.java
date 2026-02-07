@@ -29,10 +29,10 @@ public abstract class NutiumArmourItem extends ArmorItem {
          super(Type.BOOTS, properties);
       }
 
-      @Override
-      public @Nullable ResourceLocation getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, ArmorMaterial.Layer layer, boolean innerModel) {
-         return super.layer1;
-      }
+//      @Override
+//      public @Nullable ResourceLocation getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, ArmorMaterial.Layer layer, boolean innerModel) {
+//         return super.layer1;
+//      }
 
    }
 
@@ -41,10 +41,10 @@ public abstract class NutiumArmourItem extends ArmorItem {
          super(Type.LEGGINGS, properties);
       }
 
-      @Override
-      public @Nullable ResourceLocation getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, ArmorMaterial.Layer layer, boolean innerModel) {
-         return super.layer2;
-      }
+//      @Override
+//      public @Nullable ResourceLocation getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, ArmorMaterial.Layer layer, boolean innerModel) {
+//         return super.layer2;
+//      }
 
    }
 
@@ -53,10 +53,10 @@ public abstract class NutiumArmourItem extends ArmorItem {
          super(Type.CHESTPLATE, properties);
       }
 
-      @Override
-      public @Nullable ResourceLocation getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, ArmorMaterial.Layer layer, boolean innerModel) {
-         return super.layer1;
-      }
+//      @Override
+//      public @Nullable ResourceLocation getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, ArmorMaterial.Layer layer, boolean innerModel) {
+//         return super.layer1;
+//      }
    }
 
    public static class Helmet extends NutiumArmourItem {
@@ -64,9 +64,9 @@ public abstract class NutiumArmourItem extends ArmorItem {
          super(Type.HELMET, properties);
       }
 
-      @Override
-      public @Nullable ResourceLocation getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, ArmorMaterial.Layer layer, boolean innerModel) {
-         return super.layer2;
-      }
+//      @Override
+//      public @Nullable ResourceLocation getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, ArmorMaterial.Layer layer, boolean innerModel) {
+//         return super.layer2;
+//      }
    }
 }

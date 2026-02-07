@@ -212,5 +212,7 @@ public class GarnishedAdditionsItemsInit {
     public static final ItemEntry<?> INCOMPLETE_NETHERITE_SCRAP = REGISTRATE.item("incomplete_netherite_scrap", SequencedAssemblyItem::new).register();
     public static final ItemEntry<?> BIOCHAR = REGISTRATE.item("biochar", BiocharItem::new).register();
 
+    public static final ItemEntry<?> INCOMPLETE_HEAVY_CORE = REGISTRATE.item("incomplete_heavy_core", SequencedAssemblyItem::new).properties(p -> p.rarity(Rarity.RARE)).register();
+
     public static void register() {}
 }

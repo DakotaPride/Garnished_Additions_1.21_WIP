@@ -1,0 +1,80 @@
+{
+  "type": "create:sequenced_assembly",
+  "ingredient": {
+    "item": "garnished_additions:stellar_core"
+  },
+  "loops": 1,
+  "results": [
+    {
+      "id": "heavy_core"
+    }
+  ],
+  "sequence": [
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "garnished_additions:stellar_core"
+        },
+        {
+          "item": "create:sturdy_sheet"
+        }
+      ],
+      "results": [
+        {
+          "id": "garnished_additions:incomplete_heavy_core"
+        }
+      ]
+    },
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "garnished_additions:stellar_core"
+        },
+        {
+          "item": "create:sturdy_sheet"
+        }
+      ],
+      "results": [
+        {
+          "id": "garnished_additions:incomplete_heavy_core"
+        }
+      ]
+    },
+    {
+      "type": "create:filling",
+      "ingredients": [
+        {
+          "item": "garnished_additions:stellar_core"
+        },
+        {
+          "type": "fluid_stack",
+          "amount": 500,
+          "fluid": "minecraft:lava"
+        }
+      ],
+      "results": [
+        {
+          "id": "garnished_additions:incomplete_heavy_core"
+        }
+      ]
+    },
+    {
+      "type": "create:pressing",
+      "ingredients": [
+        {
+          "item": "garnished_additions:stellar_core"
+        }
+      ],
+      "results": [
+        {
+          "id": "garnished_additions:incomplete_heavy_core"
+        }
+      ]
+    }
+  ],
+  "transitional_item": {
+    "id": "garnished_additions:incomplete_heavy_core"
+  }
+}

@@ -64,8 +64,5 @@ public class GarnishedAdditionsArmourMaterials {
         }
 
         return ARMOUR_MATERIAL.register(string, () -> new ArmorMaterial(enumMap2, i, holder, supplier, list, f, g));
-//        return Registry.registerForHolder(
-//                BuiltInRegistries.ARMOR_MATERIAL, HibernalHerbsMod.asResource(string), new ArmorMaterial(enumMap2, i, holder, supplier, list, f, g)
-//        );
     }
 }
