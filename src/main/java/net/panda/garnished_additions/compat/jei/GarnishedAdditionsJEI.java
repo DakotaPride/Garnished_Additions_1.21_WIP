@@ -24,8 +24,8 @@ public class GarnishedAdditionsJEI implements IModPlugin {
 
     @Override
     public void registerCategories(IRecipeCategoryRegistration registration) {
-        RECIPES.add(ConversionRecipe.create(GarnishedAdditionsItemsInit.CHROMATIC_COMPOUND.asStack(), AllItems.SHADOW_STEEL.asStack()));
-        RECIPES.add(ConversionRecipe.create(GarnishedAdditionsItemsInit.CHROMATIC_COMPOUND.asStack(), AllItems.REFINED_RADIANCE.asStack()));
+        RECIPES.add(ConversionRecipe.create(AllItems.CHROMATIC_COMPOUND.asStack(), AllItems.SHADOW_STEEL.asStack()));
+        RECIPES.add(ConversionRecipe.create(AllItems.CHROMATIC_COMPOUND.asStack(), AllItems.REFINED_RADIANCE.asStack()));
     }
 
     @Override

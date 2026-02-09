@@ -1,0 +1,42 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "ANB",
+    "C#D",
+    "EFG"
+  ],
+  "key": {
+    "N": {
+      "item": "minecraft:netherite_upgrade_smithing_template"
+    },
+    "#": {
+      "item": "garnished:garnished_nut_block"
+    },
+    "A": {
+      "item": "garnished_additions:sweetened_nut_mix"
+    },
+    "B": {
+      "item": "garnished_additions:chocolate_nut_mix"
+    },
+    "C": {
+      "item": "garnished_additions:honeyed_nut_mix"
+    },
+    "D": {
+      "item": "garnished_additions:cinder_flour_nut_mix"
+    },
+    "E": {
+      "item": "garnished_additions:salted_nut_mix"
+    },
+    "F": {
+      "item": "garnished_additions:roasted_nut_mix"
+    },
+    "G": {
+      "item": "garnished_additions:honey_roasted_nut_mix"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "garnished_additions:nutium_upgrade_smithing_template"
+  }
+}

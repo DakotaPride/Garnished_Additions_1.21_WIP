@@ -1,22 +1,29 @@
 package net.panda.garnished_additions.init;
 
-import com.simibubi.create.content.equipment.tool.AllToolMaterials;
-import com.simibubi.create.content.legacy.ChromaticCompoundColor;
 import com.simibubi.create.content.legacy.ChromaticCompoundItem;
 import com.simibubi.create.content.processing.sequenced.SequencedAssemblyItem;
-import com.simibubi.create.foundation.data.AssetLookup;
 import com.simibubi.create.foundation.data.CreateRegistrate;
 import com.tterrag.registrate.util.entry.ItemEntry;
+import net.minecraft.ChatFormatting;
+import net.minecraft.Util;
+import net.minecraft.network.chat.Component;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Rarity;
+import net.minecraft.world.item.SmithingTemplateItem;
 import net.minecraft.world.item.SwordItem;
 import net.panda.garnished_additions.GarnishedAdditionsNeoForgeMain;
 import net.panda.garnished_additions.item.*;
+
+import java.util.List;
 
 public class GarnishedAdditionsItemsInit {
     private static final CreateRegistrate REGISTRATE = GarnishedAdditionsNeoForgeMain.REGISTRATE;
 
     // Bandaid fix for invisible Create mod chromatic compound
+
+    // Should be fixed now, item will remain for people updating to this new version who have
+    // automated the processing of it, but won't be used exclusively anywhere
     public static final ItemEntry<ChromaticCompoundItem> CHROMATIC_COMPOUND =
             REGISTRATE.item("chromatic_compound", ChromaticCompoundItem::new)
                     .properties(p -> p.rarity(Rarity.UNCOMMON))
@@ -44,16 +51,6 @@ public class GarnishedAdditionsItemsInit {
     public static final ItemEntry<?> CHOCOLATE_NUT_MIX = REGISTRATE.item("chocolate_nut_mix", ChocolateNutMixItem::new).register();
     public static final ItemEntry<?> HONEYED_NUT_MIX = REGISTRATE.item("honeyed_nut_mix", HoneyedNutMixItem::new).register();
     public static final ItemEntry<?> CINDER_FLOUR_NUT_MIX = REGISTRATE.item("cinder_flour_nut_mix", CinderFlourNutMixItem::new).register();
-    public static final ItemEntry<?> INCOMPLETE_NUTIUM_HELMET = REGISTRATE.item("incomplete_nutium_helmet", SequencedAssemblyItem::new).properties(Item.Properties::fireResistant).register();
-    public static final ItemEntry<?> INCOMPLETE_NUTIUM_CHESTPLATE = REGISTRATE.item("incomplete_nutium_chestplate", SequencedAssemblyItem::new).properties(Item.Properties::fireResistant).register();
-    public static final ItemEntry<?> INCOMPLETE_NUTIUM_LEGGINGS = REGISTRATE.item("incomplete_nutium_leggings", SequencedAssemblyItem::new).properties(Item.Properties::fireResistant).register();
-    public static final ItemEntry<?> INCOMPLETE_NUTIUM_BOOTS = REGISTRATE.item("incomplete_nutium_boots", SequencedAssemblyItem::new).properties(Item.Properties::fireResistant).register();
-    public static final ItemEntry<?> INCOMPLETE_NUTIUM_PICKAXE = REGISTRATE.item("incomplete_nutium_pickaxe", SequencedAssemblyItem::new).properties(Item.Properties::fireResistant).register();
-    public static final ItemEntry<?> INCOMPLETE_NUTIUM_AXE = REGISTRATE.item("incomplete_nutium_axe", SequencedAssemblyItem::new).properties(Item.Properties::fireResistant).register();
-    public static final ItemEntry<?> INCOMPLETE_NUTIUM_SWORD = REGISTRATE.item("incomplete_nutium_sword", SequencedAssemblyItem::new).register();
-    public static final ItemEntry<?> INCOMPLETE_NUTIUM_SHOVEL = REGISTRATE.item("incomplete_nutium_shovel", SequencedAssemblyItem::new).register();
-    public static final ItemEntry<?> INCOMPLETE_NUTIUM_HOE = REGISTRATE.item("incomplete_nutium_hoe", SequencedAssemblyItem::new).register();
-    //public static final ItemEntry<?> NUTIUM_BLOCK = block(GarnishedAdditionsBlocksInit.NUTIUM_BLOCK);
     public static final ItemEntry<?> FRITTELLE = REGISTRATE.item("frittelle", FrittelleItem::new).register();
     public static final ItemEntry<?> BAKEWELL_TART = REGISTRATE.item("bakewell_tart", BakewellTartItem::new).register();
     public static final ItemEntry<?> BISCOTTI = REGISTRATE.item("biscotti", BiscottiItem::new).register();
@@ -105,32 +102,15 @@ public class GarnishedAdditionsItemsInit {
     public static final ItemEntry<?> ROASTED_PECAN = REGISTRATE.item("roasted_pecan", RoastedPecanItem::new).register();
     public static final ItemEntry<?> ROASTED_PISTACHIO = REGISTRATE.item("roasted_pistachio", RoastedPistachioItem::new).register();
     public static final ItemEntry<?> ROASTED_WALNUT = REGISTRATE.item("roasted_walnut", RoastedWalnutItem::new).register();
-    //      public static final ItemEntry<?> ETHEREAL_WOOD = block(GarnishedAdditionsBlocksInit.ETHEREAL_WOOD);
-//      public static final ItemEntry<?> ETHEREAL_LOG = block(GarnishedAdditionsBlocksInit.ETHEREAL_LOG);
-//      public static final ItemEntry<?> ETHEREAL_PLANKS = block(GarnishedAdditionsBlocksInit.ETHEREAL_PLANKS);
-//      public static final ItemEntry<?> ETHEREAL_LEAVES = block(GarnishedAdditionsBlocksInit.ETHEREAL_LEAVES);
-//      public static final ItemEntry<?> ETHEREAL_STAIRS = block(GarnishedAdditionsBlocksInit.ETHEREAL_STAIRS);
-//      public static final ItemEntry<?> ETHEREAL_SLAB = block(GarnishedAdditionsBlocksInit.ETHEREAL_SLAB);
-//      public static final ItemEntry<?> ETHEREAL_FENCE = block(GarnishedAdditionsBlocksInit.ETHEREAL_FENCE);
-//      public static final ItemEntry<?> ETHEREAL_FENCE_GATE = block(GarnishedAdditionsBlocksInit.ETHEREAL_FENCE_GATE);
-//      public static final ItemEntry<?> ETHEREAL_PRESSURE_PLATE = block(GarnishedAdditionsBlocksInit.ETHEREAL_PRESSURE_PLATE);
-//      public static final ItemEntry<?> ETHEREAL_BUTTON = block(GarnishedAdditionsBlocksInit.ETHEREAL_BUTTON);
-//      public static final ItemEntry<?> STRIPPED_ETHEREAL_WOOD = block(GarnishedAdditionsBlocksInit.STRIPPED_ETHEREAL_WOOD);
-//      public static final ItemEntry<?> STRIPPED_ETHEREAL_LOG = block(GarnishedAdditionsBlocksInit.STRIPPED_ETHEREAL_LOG);
     public static final ItemEntry<?> UNGARNISHED_NUT_MIX = REGISTRATE.item("ungarnished_nut_mix", UngarnishedNutMixItem::new).register();
     public static final ItemEntry<?> SALTED_NUT_MIX = REGISTRATE.item("salted_nut_mix", SaltedNutMixItem::new).register();
     public static final ItemEntry<?> ROASTED_NUT_MIX = REGISTRATE.item("roasted_nut_mix", RoastedNutMixItem::new).register();
     public static final ItemEntry<?> HONEY_ROASTED_NUT_MIX = REGISTRATE.item("honey_roasted_nut_mix", HoneyRoastedNutMixItem::new).register();
-    //      public static final ItemEntry<?> ETHEREAL_DOOR = doubleBlock(GarnishedAdditionsBlocksInit.ETHEREAL_DOOR);
-//      public static final ItemEntry<?> ETHEREAL_TRAPDOOR = block(GarnishedAdditionsBlocksInit.ETHEREAL_TRAPDOOR);
-//      public static final ItemEntry<?> ROOTED_END_STONE = block(GarnishedAdditionsBlocksInit.ROOTED_END_STONE);
     public static final ItemEntry<?> ETHEREAL_ROOTS = REGISTRATE.item("ethereal_roots", Item::new).register();
     public static final ItemEntry<?> PANCAKES = REGISTRATE.item("pancakes", PancakesItem::new).register();
     public static final ItemEntry<?> HONEY_COVERED_PANCAKES = REGISTRATE.item("honey_covered_pancakes", HoneyCoveredPancakesItem::new).register();
     public static final ItemEntry<?> CHOCOLATE_COVERED_PANCAKES = REGISTRATE.item("chocolate_covered_pancakes", ChocolateCoveredPancakesItem::new).register();
     public static final ItemEntry<?> ETHEREAL_BERRIES = REGISTRATE.item("ethereal_berries", EtherealBerriesItem::new).register();
-    //      public static final ItemEntry<?> ETHEREAL_SAP_BUCKET = REGISTRATE.item("ethereal_sap_bucket", EtherealSapItem::new).register();
-//      public static final ItemEntry<?> ETHEREAL_SYRUP_BUCKET = REGISTRATE.item("ethereal_syrup_bucket", EtherealSyrupItem::new).register();
     public static final ItemEntry<?> ETHEREAL_FRUIT = REGISTRATE.item("ethereal_fruit", EtherealFruitItem::new).register();
     public static final ItemEntry<?> MACARON = REGISTRATE.item("macaron", MacaronItem::new).register();
     public static final ItemEntry<?> YAM_PUFFS = REGISTRATE.item("yam_puffs", YamPuffsItem::new).register();
@@ -142,18 +122,6 @@ public class GarnishedAdditionsItemsInit {
     public static final ItemEntry<?> ETHEREAL_SALAD = REGISTRATE.item("ethereal_salad", EtherealSaladItem::new).register();
     public static final ItemEntry<?> SLICE_OF_ETHEREAL_DELIGHT = REGISTRATE.item("slice_of_ethereal_delight", SliceOfEtherealDelightItem::new).register();
     public static final ItemEntry<?> ETHEREAL_LEAF = REGISTRATE.item("ethereal_leaf", Item::new).register();
-    //      public static final ItemEntry<?> ETHEREAL_CAKE = block(GarnishedAdditionsBlocksInit.ETHEREAL_CAKE);
-//      public static final ItemEntry<?> ETHEREAL_CAKE_1 = block(GarnishedAdditionsBlocksInit.ETHEREAL_CAKE_1);
-//      public static final ItemEntry<?> ETHEREAL_CAKE_2 = block(GarnishedAdditionsBlocksInit.ETHEREAL_CAKE_2);
-//      public static final ItemEntry<?> ETHEREAL_CAKE_3 = block(GarnishedAdditionsBlocksInit.ETHEREAL_CAKE_3);
-//      public static final ItemEntry<?> ETHEREAL_CAKE_4 = block(GarnishedAdditionsBlocksInit.ETHEREAL_CAKE_4);
-//      public static final ItemEntry<?> ETHEREAL_CAKE_5 = block(GarnishedAdditionsBlocksInit.ETHEREAL_CAKE_5);
-//      public static final ItemEntry<?> ETHEREAL_CAKE_6 = block(GarnishedAdditionsBlocksInit.ETHEREAL_CAKE_6);
-//      public static final ItemEntry<?> ETHEREAL_GROWTH = block(GarnishedAdditionsBlocksInit.ETHEREAL_GROWTH);
-//      public static final ItemEntry<?> ETHEREAL_BUSH_STAGE_0 = block(GarnishedAdditionsBlocksInit.ETHEREAL_BUSH_STAGE_0);
-//      public static final ItemEntry<?> ETHEREAL_BUSH_STAGE_1 = block(GarnishedAdditionsBlocksInit.ETHEREAL_BUSH_STAGE_1);
-//      public static final ItemEntry<?> ETHEREAL_BUSH_STAGE_2 = block(GarnishedAdditionsBlocksInit.ETHEREAL_BUSH_STAGE_2);
-//      public static final ItemEntry<?> ETHEREAL_BUSH_STAGE_3 = block(GarnishedAdditionsBlocksInit.ETHEREAL_BUSH_STAGE_3);
     public static final ItemEntry<?> RAW_PIGLIN = REGISTRATE.item("raw_piglin", PiglinMeatItem::new).register();
     public static final ItemEntry<?> COOKED_PIGLIN = REGISTRATE.item("cooked_piglin", CookedPiglinItem::new).register();
     public static final ItemEntry<?> PIGLIN_STEW = REGISTRATE.item("piglin_stew", PiglinStewItem::new).register();
@@ -170,10 +138,6 @@ public class GarnishedAdditionsItemsInit {
     public static final ItemEntry<?> DANGER_NOODLES = REGISTRATE.item("danger_noodles", DangerNoodlesItem::new).register();
     public static final ItemEntry<?> SPICE_COMPOUND = REGISTRATE.item("spice_compound", Item::new).initialProperties(() -> new Item.Properties().fireResistant()).register();
     public static final ItemEntry<?> SPICE_POWDER = REGISTRATE.item("spice_powder", Item::new).initialProperties(() -> new Item.Properties().fireResistant()).register();
-    //      public static final ItemEntry<?> LETHAL_LIANA = block(GarnishedAdditionsBlocksInit.LETHAL_LIANA);
-//      public static final ItemEntry<?> LETHAL_LIANA_BOTTOM = block(GarnishedAdditionsBlocksInit.LETHAL_LIANA_BOTTOM);
-//      public static final ItemEntry<?> HAZARDOUS_HYPHAE = block(GarnishedAdditionsBlocksInit.HAZARDOUS_HYPHAE);
-//      public static final ItemEntry<?> HAZARDOUS_HYPHAE_BOTTOM = block(GarnishedAdditionsBlocksInit.HAZARDOUS_HYPHAE_BOTTOM);
     public static final ItemEntry<?> BLACK_PUDDING = REGISTRATE.item("black_pudding", BlackPuddingItem::new).register();
     public static final ItemEntry<?> GUARDIAN_FIN = REGISTRATE.item("guardian_fin", Item::new).register();
     public static final ItemEntry<?> ELDER_GUARDIAN_FIN = REGISTRATE.item("elder_guardian_fin", Item::new).properties(p -> p.rarity(Rarity.UNCOMMON)).register();
@@ -198,7 +162,6 @@ public class GarnishedAdditionsItemsInit {
     public static final ItemEntry<?> BIOFUEL = REGISTRATE.item("biofuel", Item::new).register();
     public static final ItemEntry<?> NUT_POWDER = REGISTRATE.item("nut_powder", Item::new).register();
     public static final ItemEntry<?> STARDUST = REGISTRATE.item("stardust", Item::new).register();
-    //public static final ItemEntry<?> STARDUST_BLOCK = block(GarnishedAdditionsBlocksInit.STARDUST_BLOCK);
     public static final ItemEntry<?> STELLAR_HUSK = REGISTRATE.item("stellar_husk", Item::new).initialProperties(() -> new Item.Properties().fireResistant().rarity(Rarity.UNCOMMON)).register();
     public static final ItemEntry<?> STELLAR_CORE = REGISTRATE.item("stellar_core", StellarCoreItem::new).register();
     public static final ItemEntry<?> IRONNUT = REGISTRATE.item("ironnut", IronnutItem::new).register();
@@ -213,6 +176,50 @@ public class GarnishedAdditionsItemsInit {
     public static final ItemEntry<?> BIOCHAR = REGISTRATE.item("biochar", BiocharItem::new).register();
 
     public static final ItemEntry<?> INCOMPLETE_HEAVY_CORE = REGISTRATE.item("incomplete_heavy_core", SequencedAssemblyItem::new).properties(p -> p.rarity(Rarity.RARE)).register();
+
+    public static final ItemEntry<?> NUTIUM_SMITHING_TEMPLATE = REGISTRATE.item("nutium_upgrade_smithing_template",
+            properties -> createNutiumUpgradeTemplate()).properties(properties -> properties.rarity(Rarity.UNCOMMON)).register();
+
+    public static SmithingTemplateItem createNutiumUpgradeTemplate() {
+        return new SmithingTemplateItem(
+                Component.translatable(Util.makeDescriptionId("item", GarnishedAdditionsNeoForgeMain.asResource("smithing_template.nutium_upgrade.applies_to"))).withStyle(ChatFormatting.BLUE),
+                Component.translatable(Util.makeDescriptionId("item", GarnishedAdditionsNeoForgeMain.asResource("smithing_template.nutium_upgrade.ingredients"))).withStyle(ChatFormatting.BLUE),
+                Component.translatable(Util.makeDescriptionId("upgrade", GarnishedAdditionsNeoForgeMain.asResource("nutium_upgrade"))).withStyle(ChatFormatting.GRAY),
+                Component.translatable(Util.makeDescriptionId("upgrade", GarnishedAdditionsNeoForgeMain.asResource("smithing_template.nutium_upgrade.base_slot_description"))),
+                Component.translatable(Util.makeDescriptionId("upgrade", GarnishedAdditionsNeoForgeMain.asResource("smithing_template.nutium_upgrade.additions_slot_description"))),
+                createNutiumUpgradeIconList(),
+                createNutiumUpgradeMaterialList()
+        );
+    }
+
+    private static final ResourceLocation EMPTY_SLOT_HELMET = ResourceLocation.withDefaultNamespace("item/empty_armor_slot_helmet");
+    private static final ResourceLocation EMPTY_SLOT_CHESTPLATE = ResourceLocation.withDefaultNamespace("item/empty_armor_slot_chestplate");
+    private static final ResourceLocation EMPTY_SLOT_LEGGINGS = ResourceLocation.withDefaultNamespace("item/empty_armor_slot_leggings");
+    private static final ResourceLocation EMPTY_SLOT_BOOTS = ResourceLocation.withDefaultNamespace("item/empty_armor_slot_boots");
+    private static final ResourceLocation EMPTY_SLOT_HOE = ResourceLocation.withDefaultNamespace("item/empty_slot_hoe");
+    private static final ResourceLocation EMPTY_SLOT_AXE = ResourceLocation.withDefaultNamespace("item/empty_slot_axe");
+    private static final ResourceLocation EMPTY_SLOT_SWORD = ResourceLocation.withDefaultNamespace("item/empty_slot_sword");
+    private static final ResourceLocation EMPTY_SLOT_SHOVEL = ResourceLocation.withDefaultNamespace("item/empty_slot_shovel");
+    private static final ResourceLocation EMPTY_SLOT_PICKAXE = ResourceLocation.withDefaultNamespace("item/empty_slot_pickaxe");
+    private static final ResourceLocation EMPTY_SLOT_INGOT = ResourceLocation.withDefaultNamespace("item/empty_slot_ingot");
+
+    private static List<ResourceLocation> createNutiumUpgradeIconList() {
+        return List.of(
+                EMPTY_SLOT_HELMET,
+                EMPTY_SLOT_SWORD,
+                EMPTY_SLOT_CHESTPLATE,
+                EMPTY_SLOT_PICKAXE,
+                EMPTY_SLOT_LEGGINGS,
+                EMPTY_SLOT_AXE,
+                EMPTY_SLOT_BOOTS,
+                EMPTY_SLOT_HOE,
+                EMPTY_SLOT_SHOVEL
+        );
+    }
+
+    private static List<ResourceLocation> createNutiumUpgradeMaterialList() {
+        return List.of(EMPTY_SLOT_INGOT);
+    }
 
     public static void register() {}
 }

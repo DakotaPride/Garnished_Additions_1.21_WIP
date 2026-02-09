@@ -11,10 +11,9 @@ import org.jetbrains.annotations.NotNull;
 import java.util.function.Supplier;
 
 public enum GarnishedAdditionsTiers implements Tier {
-    NUTIUM(4, 3072, 10.0F, 9.0F, 20,
-            () -> Ingredient.of(GarnishedAdditionsItemsInit.NUTIUM_INGOT.get()), BlockTags.INCORRECT_FOR_NETHERITE_TOOL);
+    NUTIUM(BlockTags.INCORRECT_FOR_NETHERITE_TOOL, 3072, 10.0F, 5.0F, 20,
+            () -> Ingredient.of(GarnishedAdditionsItemsInit.NUTIUM_INGOT.get()));
 
-    private final int level;
     private final int uses;
     private final float speed;
     private final float damage;
@@ -22,14 +21,12 @@ public enum GarnishedAdditionsTiers implements Tier {
     private final LazyLoadedValue<Ingredient> repairIngredient;
     private final TagKey<Block> incorrectBlocksForDrops;
 
-    GarnishedAdditionsTiers(int level,
+    GarnishedAdditionsTiers(TagKey<Block> incorrectBlocksForDrops,
                             int uses,
                             float speed,
                             float damage,
                             int enchantmentValue,
-                            Supplier<Ingredient> repairIngredient,
-                            TagKey<Block> incorrectBlocksForDrops) {
-        this.level = level;
+                            Supplier<Ingredient> repairIngredient) {
         this.uses = uses;
         this.speed = speed;
         this.damage = damage;
@@ -53,10 +50,6 @@ public enum GarnishedAdditionsTiers implements Tier {
     @Override
     public @NotNull TagKey<Block> getIncorrectBlocksForDrops() {
         return incorrectBlocksForDrops;
-    }
-
-    public int getLevel() {
-        return this.level;
     }
 
     public int getEnchantmentValue() {

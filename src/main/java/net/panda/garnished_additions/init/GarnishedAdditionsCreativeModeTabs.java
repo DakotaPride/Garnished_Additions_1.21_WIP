@@ -30,11 +30,12 @@ public class GarnishedAdditionsCreativeModeTabs {
    private static class RegistrateDisplayItemsGenerator implements CreativeModeTab.DisplayItemsGenerator {
       @Override
       public void accept(CreativeModeTab.ItemDisplayParameters parameters, CreativeModeTab.Output output) {
-         output.accept(GarnishedAdditionsItemsInit.CHROMATIC_COMPOUND.get());
+         output.accept(AllItems.CHROMATIC_COMPOUND.get());
          output.accept(AllItems.REFINED_RADIANCE.get());
          output.accept(AllItems.SHADOW_STEEL.get());
          output.accept(AllBlocks.REFINED_RADIANCE_CASING.get());
          output.accept(AllBlocks.SHADOW_STEEL_CASING.get());
+         output.accept(GarnishedAdditionsItemsInit.NUTIUM_SMITHING_TEMPLATE.get());
          output.accept(GarnishedAdditionsItemsInit.NUTIUM_INGOT.get());
          output.accept(GarnishedAdditionsBlocksInit.NUTIUM_BLOCK.get());
          output.accept(GarnishedAdditionsItemsInit.NUTIUM_HELMET.get());

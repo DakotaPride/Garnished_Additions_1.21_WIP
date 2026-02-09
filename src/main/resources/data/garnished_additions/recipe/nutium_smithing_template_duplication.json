@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "NTN",
+    "N#N",
+    "NNN"
+  ],
+  "key": {
+    "N": {
+      "tag": "garnished:ungarnished_nuts"
+    },
+    "#": {
+      "item": "garnished:garnished_nut_block"
+    },
+    "T": {
+      "item": "garnished_additions:nutium_upgrade_smithing_template"
+    }
+  },
+  "result": {
+    "count": 2,
+    "id": "garnished_additions:nutium_upgrade_smithing_template"
+  }
+}

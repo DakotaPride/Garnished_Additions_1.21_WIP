@@ -182,5 +182,11 @@
   "item.garnished_additions.ethereal_syrup_bucket": "Bucket of Ethereal Syrup",
   "item.garnished_additions.cooked_glow_squid": "Cooked Glow Squid",
   "block.garnished_additions.stripped_ethereal_log": "Stripped Ethereal Log",
-  "item.garnished_additions.incomplete_heavy_core": "Incomplete Heavy Core"
+  "item.garnished_additions.incomplete_heavy_core": "Incomplete Heavy Core",
+  "item.garnished_additions.nutium_upgrade_smithing_template": "Smithing Template",
+  "item.garnished_additions.smithing_template.nutium_upgrade.additions_slot_description": "Add Nutium Ingot",
+  "item.garnished_additions.smithing_template.nutium_upgrade.applies_to": "Netherite Equipment",
+  "item.garnished_additions.smithing_template.nutium_upgrade.base_slot_description": "Add netherite armor, weapon, or tool",
+  "item.garnished_additions.smithing_template.nutium_upgrade.ingredients": "Nutium Ingot",
+  "upgrade.garnished_additions.nutium_upgrade": "Nutium Upgrade"
 }

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "garnished_additions:nutium_ingot"
+  },
+  "base": {
+    "item": "minecraft:netherite_sword"
+  },
+  "result": {
+    "count": 1,
+    "id": "garnished_additions:nutium_sword"
+  },
+  "template": {
+    "item": "garnished_additions:nutium_upgrade_smithing_template"
+  }
+}
